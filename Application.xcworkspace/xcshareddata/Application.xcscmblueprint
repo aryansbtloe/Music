@@ -1,0 +1,86 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DA8ED31EC9141F2F22C2E2C44F8642070ABADAF0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2B67313E5D19FC912607C2EF54C082A71933AFFA" : 0,
+    "DA8ED31EC9141F2F22C2E2C44F8642070ABADAF0" : 0,
+    "569E9CAD76C1BF8EEC28C7511892F573626A6246" : 0,
+    "815DC05B1C076F2458A25D6357DC98814E8B55C2" : 0,
+    "BF44302159B708EFAE0B206793D54296BDF1F7B0" : 0,
+    "065EEE2F2F9BCDAF777B45B624279BC60A602B65" : 0,
+    "6F795937E36F4C5CEC4BB29108F4394E079CF235" : 0,
+    "B1858A9813619A10A00C6644D2ED467C283324BD" : 0,
+    "C5212FA4250958383DF05F05831BB3C18041A373" : 0,
+    "C8E203DFC9FE542A45EDAFA6A592E92D7F3647EC" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "69D075B4-C397-49D1-83A4-176B2F37697A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2B67313E5D19FC912607C2EF54C082A71933AFFA" : "yhr-patient-ios-new\/",
+    "DA8ED31EC9141F2F22C2E2C44F8642070ABADAF0" : "SM\/",
+    "569E9CAD76C1BF8EEC28C7511892F573626A6246" : "..\/YHRDoctor\/yhr-doctor-ios",
+    "815DC05B1C076F2458A25D6357DC98814E8B55C2" : "orahi_ios\/",
+    "BF44302159B708EFAE0B206793D54296BDF1F7B0" : "YHR-Patient",
+    "065EEE2F2F9BCDAF777B45B624279BC60A602B65" : "ios_app_orahi\/",
+    "6F795937E36F4C5CEC4BB29108F4394E079CF235" : "Orahi\/",
+    "B1858A9813619A10A00C6644D2ED467C283324BD" : "YHRP\/",
+    "C5212FA4250958383DF05F05831BB3C18041A373" : "yhr-patient-ios\/",
+    "C8E203DFC9FE542A45EDAFA6A592E92D7F3647EC" : "..\/YHRDoctor\/yhrdoctor"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Application",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Application.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/orahitech\/orahi_ios_app.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "065EEE2F2F9BCDAF777B45B624279BC60A602B65"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/Uday_Medic\/yhr-patient-ios-new.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2B67313E5D19FC912607C2EF54C082A71933AFFA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/Uday_Medic\/yhr-doctor-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "569E9CAD76C1BF8EEC28C7511892F573626A6246"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aryansbtloe\/testProject.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "6F795937E36F4C5CEC4BB29108F4394E079CF235"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/orahitech\/orahi_ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "815DC05B1C076F2458A25D6357DC98814E8B55C2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aryansbtloe\/YHRP.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B1858A9813619A10A00C6644D2ED467C283324BD"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aryansbtloe\/iOSProjectTemplateSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BF44302159B708EFAE0B206793D54296BDF1F7B0"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/Uday_Medic\/yhr-patient-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C5212FA4250958383DF05F05831BB3C18041A373"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/bitbucket.org\/raktec\/yhrdoctor.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C8E203DFC9FE542A45EDAFA6A592E92D7F3647EC"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/aryansbtloe\/SM.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DA8ED31EC9141F2F22C2E2C44F8642070ABADAF0"
+    }
+  ]
+}

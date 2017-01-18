@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>69D075B4-C397-49D1-83A4-176B2F37697A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Application</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BF44302159B708EFAE0B206793D54296BDF1F7B0</key>
+		<string>https://github.com/aryansbtloe/iOSProjectTemplateSwift.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Application.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BF44302159B708EFAE0B206793D54296BDF1F7B0</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/aryansbtloe/iOSProjectTemplateSwift.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BF44302159B708EFAE0B206793D54296BDF1F7B0</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BF44302159B708EFAE0B206793D54296BDF1F7B0</string>
+			<key>IDESourceControlWCCName</key>
+			<string>YHR-Patient</string>
+		</dict>
+	</array>
+</dict>
+</plist>

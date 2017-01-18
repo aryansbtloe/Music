@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="MavenProRegular.ttf">
+            <string>MavenProRegular</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleLabelTableViewCell" customModule="Application" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SingleLabelTableViewCell" rowHeight="33" id="Rcx-c0-gb1" customClass="SingleLabelTableViewCell" customModule="Application" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="33"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rcx-c0-gb1" id="oO2-yR-EE2">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="32.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2k-Wf-AuE">
+                        <rect key="frame" x="46" y="6" width="228" height="20"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="MavenProRegular" family="Maven Pro" pointSize="15"/>
+                        <color key="textColor" red="0.4039215686" green="0.4039215686" blue="0.4039215686" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kdd-u5-dQZ">
+                        <rect key="frame" x="30" y="31.5" width="260" height="0.5"/>
+                        <color key="backgroundColor" red="0.47843137250000001" green="0.3294117647" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="rbi-1b-ad7"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="843-7L-ZZB">
+                        <rect key="frame" x="256" y="17" width="20" height="12"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="12" id="cEq-i5-wfz"/>
+                            <constraint firstAttribute="width" constant="20" id="us7-bV-9Hr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="F2k-Wf-AuE" firstAttribute="top" secondItem="oO2-yR-EE2" secondAttribute="top" constant="6" id="JgO-Ef-ynQ"/>
+                    <constraint firstItem="kdd-u5-dQZ" firstAttribute="top" secondItem="F2k-Wf-AuE" secondAttribute="bottom" constant="5.5" id="PiQ-TL-hRc"/>
+                    <constraint firstAttribute="trailing" secondItem="kdd-u5-dQZ" secondAttribute="trailing" constant="30" id="Uaw-DY-n5I"/>
+                    <constraint firstItem="kdd-u5-dQZ" firstAttribute="top" secondItem="843-7L-ZZB" secondAttribute="bottom" constant="2.5" id="Vda-j1-oyd"/>
+                    <constraint firstItem="843-7L-ZZB" firstAttribute="leading" secondItem="F2k-Wf-AuE" secondAttribute="trailing" constant="-18" id="Zk5-Iv-bh3"/>
+                    <constraint firstItem="F2k-Wf-AuE" firstAttribute="leading" secondItem="oO2-yR-EE2" secondAttribute="leading" constant="46" id="edu-Le-buv"/>
+                    <constraint firstItem="kdd-u5-dQZ" firstAttribute="top" secondItem="F2k-Wf-AuE" secondAttribute="bottom" constant="5.5" id="hPo-Xe-1Eg"/>
+                    <constraint firstAttribute="bottom" secondItem="kdd-u5-dQZ" secondAttribute="bottom" constant="0.5" id="qxc-G6-GpH"/>
+                    <constraint firstAttribute="trailing" secondItem="F2k-Wf-AuE" secondAttribute="trailing" constant="46" id="rc8-Ve-UzJ"/>
+                    <constraint firstItem="kdd-u5-dQZ" firstAttribute="leading" secondItem="oO2-yR-EE2" secondAttribute="leading" constant="30" id="sf3-GU-lJe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="badgeIndicatorView" destination="843-7L-ZZB" id="3m6-P4-p4b"/>
+                <outlet property="titleLabel" destination="F2k-Wf-AuE" id="vhg-jE-sEK"/>
+            </connections>
+            <point key="canvasLocation" x="286" y="180.5"/>
+        </tableViewCell>
+    </objects>
+</document>
