@@ -330,12 +330,12 @@ class ServerCommunicationManager: NSObject {
             DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default).async {
                 let responseDictionary = parsedJsonFrom(response as? NSData as Data?,methodName: methodName!)
                 if (isNotNull(responseDictionary) && responseDictionary is NSDictionary) {
-                    if self.isSuccess(responseDictionary as! NSDictionary?){
+                    if self.isSuccess(responseDictionary as! NSDictionary){
                         if self.showSuccessResponseMessage {
                             var successMessage : NSString?
-                            if (responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) != nil) {
-                                if (responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) is String) {
-                                    successMessage = responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) as? NSString
+                            if ((responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) != nil) {
+                                if ((responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) is String) {
+                                    successMessage = (responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) as? NSString
                                 }else{
                                     successMessage = "Successfull"
                                 }
@@ -348,14 +348,14 @@ class ServerCommunicationManager: NSObject {
                             completionBlock!(responseDictionary as? NSDictionary)
                         })
                     }
-                    else if self.isFailure(responseDictionary as! NSDictionary?){
+                    else if self.isFailure(responseDictionary as! NSDictionary){
                         var errorMessage : NSString?
-                        if (responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) != nil) {
-                            if (responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) is NSString) {
+                        if ((responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) != nil) {
+                            if ((responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) is NSString) {
                                 
-                                errorMessage = responseDictionary?.object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) as? NSString
+                                errorMessage = (responseDictionary as! NSDictionary).object(forKey: ServerCommunicationConstants.RESPONSE_MESSAGE_KEY) as? NSString
                             }else{
-                                errorMessage = responseDictionary?.description as NSString?
+                                errorMessage = (responseDictionary as! NSDictionary).description as NSString?
                             }
                         }
                         else {

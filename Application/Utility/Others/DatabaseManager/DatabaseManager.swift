@@ -90,7 +90,7 @@ class DatabaseManager: NSObject{
             if isNull(playlist.videos){
                 playlist.videos = NSOrderedSet()
             }
-            playlist.videos = playlist.videos?.addObjectAndReturn(object!)
+            playlist.videos = playlist.videos?.addObjectAndReturn(object: object!)
             saveChanges()
         }
     }
@@ -129,6 +129,7 @@ class DatabaseManager: NSObject{
                 return NSArray()
             }
         }
+        return NSArray()
     }
     
     /**

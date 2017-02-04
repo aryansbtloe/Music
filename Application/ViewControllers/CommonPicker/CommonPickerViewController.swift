@@ -146,7 +146,7 @@ class CommonPickerViewController : UIViewController,UITextFieldDelegate {
             optionList.removeAllObjects()
             for o in optionListCopy {
                 if (o as! NSString).lowercased.contains(searchBar.text!.lowercased()){
-                    optionList.add((o as AnyObject).copy())
+                    optionList.add((o as! NSString).copy())
                 }
             }
         }else{

@@ -67,7 +67,7 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
         optionsArray.add("Recently Added")
         optionsArray.add("Playlist")
         optionsArray.add("Create Playlist")
-        optionsArray.add("Support")
+        optionsArray.add("Feedback")
         optionsArray.add("Others")
         optionsTableView.reloadData()
     }
@@ -118,9 +118,9 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
                     let enteredText = (prompt.textFields![0] as UITextField).text
                     if validateIfNull(enteredText, identifier: "Playist Name"){
                         let information = ["name":enteredText!,"createdOn":Date()] as [String : Any]
-                        if DatabaseManager.sharedInstance.addPlaylist(information) {
+                        if DatabaseManager.sharedInstance.addPlaylist(information as NSDictionary) {
                             AppCommonFunctions.sharedInstance.pushVC("PlaylistViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: { (viewControllerObject) in
-                                (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getPlaylist(information)
+                                (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getPlaylist(information as NSDictionary)
                             })
                         }
                     }
@@ -134,22 +134,15 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
                 AppCommonFunctions.sharedInstance.showCommonPickerScreen(DatabaseManager.sharedInstance.getAllPlaylistNames().mutableCopy() as! NSMutableArray,titleToShow: "Playlists") { (returnedData) in
                     if isNotNull(returnedData){
                         AppCommonFunctions.sharedInstance.pushVC("PlaylistViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: { (viewControllerObject) in
-                            (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getPlaylist(["name":returnedData!])
+                            (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getPlaylist(["name":returnedData])
                         })
                     }
                 }
-            }else if option == ("Support") {
-                UIActionSheet.show(in: self.view, withTitle: "Support", cancelButtonTitle: "Cancel", destructiveButtonTitle: nil, otherButtonTitles: ["Report Bugs","Feedback / Contact Us"], tap: { (actionSheet, index) -> Void in
-                    if (index == 0){
-                        showAlert(MESSAGE_TITLE___FOR_HOW_TO_REPORT_BUG_MESSAGE, message: MESSAGE_TEXT___FOR_HOW_TO_REPORT_BUG_MESSAGE)
-                    }
-                    else if (index == 1){
-                        let feedbackVC = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(),localizedTopics: CTFeedbackViewController.defaultLocalizedTopics())
-                        feedbackVC?.toRecipients = [SUPPORT_EMAIL]
-                        feedbackVC?.useHTML = false
-                        self.navigationController?.presentVC(UINavigationController(rootViewController: feedbackVC))
-                    }
-                })
+            }else if option == ("Feedback") {
+                let feedbackVC = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(),localizedTopics: CTFeedbackViewController.defaultLocalizedTopics())
+                feedbackVC?.toRecipients = [SUPPORT_EMAIL]
+                feedbackVC?.useHTML = false
+                self.navigationController?.present(UINavigationController(rootViewController: feedbackVC!),animated: true)
             }else if option == "Others" {
                 AppCommonFunctions.sharedInstance.showOtherOptionsScreen()
             }

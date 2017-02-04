@@ -34,6 +34,7 @@ let APP_FAQ_PAGE_LINK = "https://www.swanmusic.com/index/faqs"
 let APP_CONTACT_US_PAGE_LINK = "https://www.swanmusic.com"
 let APP_TERMS_OF_USE_AND_PRIVACY_POLICY = "https://www.swanmusic.com/index/terms"
 let ENABLE_LOGGING_WEB_SERVICE_RESPONSE = true
+let ENABLE_LOGGING = true
 let ENABLE_APPLYING_STREAMING_SETTINGS = false
 let ADD_BANNER_VIEW_TAG = 7878
 let ADD_BANNER_VIEW_HEIGHT = 44.0 as CGFloat
@@ -53,6 +54,7 @@ let FONT_SEMI_BOLD = "MavenProMedium"
 let FONT_REGULAR = "MavenProRegular"
 
 let SUPPORT_EMAIL = "support@swanmusic.com"
+let KEY_STORYBOARD_IDENTIFIER = "identifierToNibNameMap"
 
 //short cuts
 let APPDELEGATE = (UIApplication.shared.delegate as! AppDelegate)

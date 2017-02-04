@@ -22,6 +22,7 @@ target 'Application' do
     pod 'XCDYouTubeKit'
     pod 'UIView+draggable'
     pod 'SwiftMessages'
+    pod 'GoogleMobileAds'
 
 end
 

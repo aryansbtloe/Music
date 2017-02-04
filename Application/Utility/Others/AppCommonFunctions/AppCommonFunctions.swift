@@ -16,7 +16,6 @@ import Fabric
 import Crashlytics
 import RESideMenu
 import AVFoundation
-import Firebase
 import GoogleMobileAds
 import XCDYouTubeKit
 import UIView_draggable
@@ -49,25 +48,15 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
     
     func prepareForStartUp(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [AnyHashable: Any]?){
         checkAndValidateDatabase()
-        #if DEBUG
-            setupForLogger()
-        #endif
         setupIQKeyboardManagerEnable()
         setupRateMyApp()
         setupOtherSettings()
-        setupLNNotifications()
         setupCrashlytics()
         showHomeScreen()
         setupForGoogleAds()
-        setupBugReporter()
-    }
-    
-    func setupForLogger(){
-        SCLogger.sharedInstance().enableConsole = true
     }
     
     func setupForGoogleAds() {
-        FIRApp.configure()
     }
     
     func addAdsBanner(_ viewController:UIViewController) {
@@ -100,7 +89,7 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
     }
     
     func setupKeyboardNextButtonHandler(){
-        NotificationCenter.default.addObserver(self, selector: Selector("viewLoadedNotification"), name: NSNotification.Name(rawValue: "viewLoaded"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: Selector(("viewLoadedNotification")), name: NSNotification.Name(rawValue: "viewLoaded"), object: nil)
     }
     
     func setupIQKeyboardManagerEnable(){
@@ -117,18 +106,8 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
         IQKeyboardManager.sharedManager().shouldPlayInputClicks = false
     }
     
-    
-    func setupLNNotifications(){
-        LNNotificationCenter.default().registerApplication(withIdentifier: APP_NAME, name: APP_NAME, icon: UIImage(named: "Icon-76"), defaultSettings: LNNotificationDefaultAppSettings)
-    }
-    
     func setupOtherSettings(){
         disableAutoCorrectionsAndTextSuggestionGlobally()
-        JLToastView.setDefaultValue(
-            UIFont(name: FONT_REGULAR, size: 12)!,
-            forAttributeName: JLToastViewFontAttributeName,
-            userInterfaceIdiom: .unspecified
-        )
         UISegmentedControl.appearance().setTitleTextAttributes([NSFontAttributeName: UIFont(name: FONT_REGULAR, size: 13)!], for: UIControlState())
         UITabBar.appearance().selectedImageTintColor = APP_THEME_COLOR
         navigationController = APPDELEGATE.window?.rootViewController as? UINavigationController
@@ -146,7 +125,7 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
             try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             try AVAudioSession.sharedInstance().setActive(true)
         }catch{
-            log("exception")
+            logMessage("exception")
         }
     }
     
@@ -162,13 +141,7 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
         RateMyApp.sharedInstance.appID = "957291553"
         RateMyApp.sharedInstance.trackAppUsage()
     }
-    
-    func setupBugReporter(){
-        let reporter = SHDShakedownEmailReporter()
-        reporter.recipient = SUPPORT_EMAIL
-        SHDShakedown.shared().reporter = reporter
-    }
-    
+
     func hidePopupViewController(){
         self.navigationController!.dismissPopupViewController(.fade)
     }

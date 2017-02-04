@@ -94,7 +94,7 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
     //MARK: - UITableView Delegate & Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat{
@@ -113,9 +113,6 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
         if indexPath.row == 1{
             cell?.titleLabel?.text = "Rate Us"
         }
-        if indexPath.row == 2{
-            cell?.titleLabel?.text = "Acknowledgements"
-        }
         return cell!
     }
     
@@ -129,13 +126,6 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
             })
         }else if indexPath.row == 1{
             RateMyApp.sharedInstance.showRatingAlert()
-        }else if indexPath.row == 2{
-            let acknowledgementsFilePath = Bundle.main.path(forResource: "Pods-Application-acknowledgements", ofType:"plist")
-            let acknowledgementsViewController = VTAcknowledgementsViewController(acknowledgementsPlistPath: acknowledgementsFilePath)
-            self.navigationController?.pushViewController(acknowledgementsViewController!, animated: true)
-            DispatchQueue.main.async(execute: {
-                addNavigationBarButton(acknowledgementsViewController, image: UIImage(named: "backarrowblack"), title: nil, isLeft: true, observer: self)
-            })
         }
     }
     

@@ -15,11 +15,7 @@
 #endif /* Application_Bridging_Header_h */
 
 #import "UIImageView+WebCache.h"
-#import "SHDShakedownEmailReporter.h"
-#import "SHDShakedown.h"
 #import "DKPredicateBuilder.h"
-#import "VTAcknowledgementsViewController.h"
-#import "UIWindow+SHDShakeListener.h"
 #import "HCYoutubeParser.h"
 #import "MPMoviePlayerController+BackgroundPlayback.h"
 #import "CombinedObjectiveC.h"

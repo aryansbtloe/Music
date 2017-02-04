@@ -2771,6 +2771,14 @@ extension UIView {
     }
 }
 
+extension NSOrderedSet {
+    func addObjectAndReturn(object:Any)->NSOrderedSet{
+        let mOSet = NSMutableOrderedSet(orderedSet: self)
+        mOSet.add(object)
+        return NSOrderedSet(array: mOSet.objectEnumerator().allObjects)
+    }
+}
+
 // MARK: Layer Extensions
 extension UIView {
     

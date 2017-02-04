@@ -30,7 +30,6 @@
 		1987F87B1C71D34E00B0971A /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1987F87A1C71D34E00B0971A /* libxml2.2.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		1987F87D1C71D36300B0971A /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1987F87C1C71D36300B0971A /* libresolv.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
 		1987F87F1C71D36F00B0971A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1987F87E1C71D36F00B0971A /* libz.tbd */; settings = {ATTRIBUTES = (Required, ); }; };
-		2F02BEFF1C8F5CDF00A6E5A9 /* MarqueeLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F02BEFE1C8F5CDF00A6E5A9 /* MarqueeLabel.m */; };
 		2F0893C11D25A83E00FB645B /* Icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2F0893BE1D25A83E00FB645B /* Icon-83.5@2x.png */; };
 		2F0893C21D25A83E00FB645B /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 2F0893BF1D25A83E00FB645B /* iTunesArtwork */; };
 		2F0893C31D25A83E00FB645B /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 2F0893C01D25A83E00FB645B /* iTunesArtwork@2x */; };
@@ -68,13 +67,6 @@
 		2F9216981D2AEA6D0004AE58 /* Video+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9216941D2AEA6D0004AE58 /* Video+CoreDataProperties.swift */; };
 		2F9216991D2AEA6D0004AE58 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9216951D2AEA6D0004AE58 /* Video.swift */; };
 		2FA0314D1CE0C18A007347B9 /* Pods-Application-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FA0314C1CE0C18A007347B9 /* Pods-Application-acknowledgements.plist */; };
-		2FA0315B1CE0C651007347B9 /* VTAcknowledgement.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA031511CE0C651007347B9 /* VTAcknowledgement.m */; };
-		2FA0315C1CE0C651007347B9 /* VTAcknowledgementsParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA031531CE0C651007347B9 /* VTAcknowledgementsParser.m */; };
-		2FA0315D1CE0C651007347B9 /* VTAcknowledgementsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA031551CE0C651007347B9 /* VTAcknowledgementsViewController.m */; };
-		2FA0315E1CE0C651007347B9 /* VTAcknowledgementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA031571CE0C651007347B9 /* VTAcknowledgementViewController.m */; };
-		2FA0315F1CE0C651007347B9 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 2FA031581CE0C651007347B9 /* LICENSE */; };
-		2FA031601CE0C651007347B9 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 2FA031591CE0C651007347B9 /* README.md */; };
-		2FA031611CE0C651007347B9 /* VTAcknowledgementsViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2FA0315A1CE0C651007347B9 /* VTAcknowledgementsViewController.bundle */; };
 		2FA431AF1C91576700B84700 /* DKArrayQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA431A81C91576700B84700 /* DKArrayQuery.m */; };
 		2FA431B01C91576700B84700 /* DKPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA431AA1C91576700B84700 /* DKPredicate.m */; };
 		2FA431B11C91576700B84700 /* DKPredicateBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 2FA431AC1C91576700B84700 /* DKPredicateBuilder.m */; };
@@ -87,25 +79,6 @@
 		463BDB215FA44713E2034822 /* Pods_Application.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2AB2D5CBDBA276350C5ED5C /* Pods_Application.framework */; };
 		4C2913C51BFADF7100C96246 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2913C31BFADF7100C96246 /* AppDelegate.swift */; };
 		4C3B3AF31C477878007C0EA7 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B3AF11C477878007C0EA7 /* Launch Screen.storyboard */; };
-		4C504BBF1C5B3A87003B6D6D /* SHDShakedown+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B871C5B3A87003B6D6D /* SHDShakedown+Private.m */; };
-		4C504BC01C5B3A87003B6D6D /* UIWindow+SHDShakeListener.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B891C5B3A87003B6D6D /* UIWindow+SHDShakeListener.m */; };
-		4C504BC11C5B3A87003B6D6D /* SHDAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B8C1C5B3A87003B6D6D /* SHDAttachment.m */; };
-		4C504BC21C5B3A87003B6D6D /* SHDBugReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B8E1C5B3A87003B6D6D /* SHDBugReport.m */; };
-		4C504BC31C5B3A87003B6D6D /* SHDShakedown.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B901C5B3A87003B6D6D /* SHDShakedown.m */; };
-		4C504BC41C5B3A87003B6D6D /* SHDXMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B941C5B3A87003B6D6D /* SHDXMLReader.m */; };
-		4C504BC51C5B3A87003B6D6D /* SHDShakedownEmailReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B961C5B3A87003B6D6D /* SHDShakedownEmailReporter.m */; };
-		4C504BC81C5B3A87003B6D6D /* SHDShakedownReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504B9C1C5B3A87003B6D6D /* SHDShakedownReporter.m */; };
-		4C504BCA1C5B3A87003B6D6D /* SHDButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BA21C5B3A87003B6D6D /* SHDButton.m */; };
-		4C504BCB1C5B3A87003B6D6D /* SHDDescriptiveInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BA41C5B3A87003B6D6D /* SHDDescriptiveInfoCell.m */; };
-		4C504BCC1C5B3A87003B6D6D /* SHDListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BA61C5B3A87003B6D6D /* SHDListCell.m */; };
-		4C504BCD1C5B3A87003B6D6D /* SHDMultipleSelectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BA81C5B3A87003B6D6D /* SHDMultipleSelectionCell.m */; };
-		4C504BCE1C5B3A87003B6D6D /* SHDReporterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BAA1C5B3A87003B6D6D /* SHDReporterView.m */; };
-		4C504BCF1C5B3A87003B6D6D /* SHDScreenshotsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BAC1C5B3A87003B6D6D /* SHDScreenshotsCell.m */; };
-		4C504BD01C5B3A87003B6D6D /* SHDTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BAE1C5B3A87003B6D6D /* SHDTextFieldCell.m */; };
-		4C504BD11C5B3A87003B6D6D /* SHDTextViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BB01C5B3A87003B6D6D /* SHDTextViewCell.m */; };
-		4C504BD21C5B3A87003B6D6D /* SHDReporterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BB31C5B3A87003B6D6D /* SHDReporterViewController.m */; };
-		4C504BD31C5B3A87003B6D6D /* LICENSE.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BB41C5B3A87003B6D6D /* LICENSE.md */; };
-		4C504BD41C5B3A87003B6D6D /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C504BB51C5B3A87003B6D6D /* README.md */; };
 		4C54F86E1BFB2B940004B105 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C54F86D1BFB2B940004B105 /* CacheManager.swift */; };
 		4C958D701C0F8127009CA929 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4C958D501C0F8127009CA929 /* LICENSE */; };
 		4C958D711C0F8127009CA929 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 4C958D511C0F8127009CA929 /* README.md */; };
@@ -175,8 +148,6 @@
 		1987F87C1C71D36300B0971A /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		1987F87E1C71D36F00B0971A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		1987F8801C71D3B200B0971A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		2F02BEFD1C8F5CDF00A6E5A9 /* MarqueeLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MarqueeLabel.h; sourceTree = "<group>"; };
-		2F02BEFE1C8F5CDF00A6E5A9 /* MarqueeLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MarqueeLabel.m; sourceTree = "<group>"; };
 		2F0893BE1D25A83E00FB645B /* Icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-83.5@2x.png"; sourceTree = "<group>"; };
 		2F0893BF1D25A83E00FB645B /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		2F0893C01D25A83E00FB645B /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
@@ -220,17 +191,6 @@
 		2F9216941D2AEA6D0004AE58 /* Video+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Video+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2F9216951D2AEA6D0004AE58 /* Video.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		2FA0314C1CE0C18A007347B9 /* Pods-Application-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-Application-acknowledgements.plist"; path = "../Pods/Target Support Files/Pods-Application/Pods-Application-acknowledgements.plist"; sourceTree = "<group>"; };
-		2FA031501CE0C651007347B9 /* VTAcknowledgement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAcknowledgement.h; sourceTree = "<group>"; };
-		2FA031511CE0C651007347B9 /* VTAcknowledgement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAcknowledgement.m; sourceTree = "<group>"; };
-		2FA031521CE0C651007347B9 /* VTAcknowledgementsParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAcknowledgementsParser.h; sourceTree = "<group>"; };
-		2FA031531CE0C651007347B9 /* VTAcknowledgementsParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAcknowledgementsParser.m; sourceTree = "<group>"; };
-		2FA031541CE0C651007347B9 /* VTAcknowledgementsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAcknowledgementsViewController.h; sourceTree = "<group>"; };
-		2FA031551CE0C651007347B9 /* VTAcknowledgementsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAcknowledgementsViewController.m; sourceTree = "<group>"; };
-		2FA031561CE0C651007347B9 /* VTAcknowledgementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAcknowledgementViewController.h; sourceTree = "<group>"; };
-		2FA031571CE0C651007347B9 /* VTAcknowledgementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAcknowledgementViewController.m; sourceTree = "<group>"; };
-		2FA031581CE0C651007347B9 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		2FA031591CE0C651007347B9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		2FA0315A1CE0C651007347B9 /* VTAcknowledgementsViewController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = VTAcknowledgementsViewController.bundle; sourceTree = "<group>"; };
 		2FA431A71C91576700B84700 /* DKArrayQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKArrayQuery.h; sourceTree = "<group>"; };
 		2FA431A81C91576700B84700 /* DKArrayQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DKArrayQuery.m; sourceTree = "<group>"; };
 		2FA431A91C91576700B84700 /* DKPredicate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DKPredicate.h; sourceTree = "<group>"; };
@@ -246,43 +206,6 @@
 		2FF5803E1D18325600629C54 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		4C2913C31BFADF7100C96246 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3B3AF21C477878007C0EA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Launch Screen.storyboard"; sourceTree = "<group>"; };
-		4C504B861C5B3A87003B6D6D /* SHDShakedown+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SHDShakedown+Private.h"; sourceTree = "<group>"; };
-		4C504B871C5B3A87003B6D6D /* SHDShakedown+Private.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SHDShakedown+Private.m"; sourceTree = "<group>"; };
-		4C504B881C5B3A87003B6D6D /* UIWindow+SHDShakeListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWindow+SHDShakeListener.h"; sourceTree = "<group>"; };
-		4C504B891C5B3A87003B6D6D /* UIWindow+SHDShakeListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWindow+SHDShakeListener.m"; sourceTree = "<group>"; };
-		4C504B8B1C5B3A87003B6D6D /* SHDAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDAttachment.h; sourceTree = "<group>"; };
-		4C504B8C1C5B3A87003B6D6D /* SHDAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDAttachment.m; sourceTree = "<group>"; };
-		4C504B8D1C5B3A87003B6D6D /* SHDBugReport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDBugReport.h; sourceTree = "<group>"; };
-		4C504B8E1C5B3A87003B6D6D /* SHDBugReport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDBugReport.m; sourceTree = "<group>"; };
-		4C504B8F1C5B3A87003B6D6D /* SHDShakedown.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDShakedown.h; sourceTree = "<group>"; };
-		4C504B901C5B3A87003B6D6D /* SHDShakedown.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDShakedown.m; sourceTree = "<group>"; };
-		4C504B931C5B3A87003B6D6D /* SHDXMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDXMLReader.h; sourceTree = "<group>"; };
-		4C504B941C5B3A87003B6D6D /* SHDXMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDXMLReader.m; sourceTree = "<group>"; };
-		4C504B951C5B3A87003B6D6D /* SHDShakedownEmailReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDShakedownEmailReporter.h; sourceTree = "<group>"; };
-		4C504B961C5B3A87003B6D6D /* SHDShakedownEmailReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDShakedownEmailReporter.m; sourceTree = "<group>"; };
-		4C504B9B1C5B3A87003B6D6D /* SHDShakedownReporter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDShakedownReporter.h; sourceTree = "<group>"; };
-		4C504B9C1C5B3A87003B6D6D /* SHDShakedownReporter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDShakedownReporter.m; sourceTree = "<group>"; };
-		4C504B9F1C5B3A87003B6D6D /* SHDConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDConstants.h; sourceTree = "<group>"; };
-		4C504BA11C5B3A87003B6D6D /* SHDButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDButton.h; sourceTree = "<group>"; };
-		4C504BA21C5B3A87003B6D6D /* SHDButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDButton.m; sourceTree = "<group>"; };
-		4C504BA31C5B3A87003B6D6D /* SHDDescriptiveInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDDescriptiveInfoCell.h; sourceTree = "<group>"; };
-		4C504BA41C5B3A87003B6D6D /* SHDDescriptiveInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDDescriptiveInfoCell.m; sourceTree = "<group>"; };
-		4C504BA51C5B3A87003B6D6D /* SHDListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDListCell.h; sourceTree = "<group>"; };
-		4C504BA61C5B3A87003B6D6D /* SHDListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDListCell.m; sourceTree = "<group>"; };
-		4C504BA71C5B3A87003B6D6D /* SHDMultipleSelectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDMultipleSelectionCell.h; sourceTree = "<group>"; };
-		4C504BA81C5B3A87003B6D6D /* SHDMultipleSelectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDMultipleSelectionCell.m; sourceTree = "<group>"; };
-		4C504BA91C5B3A87003B6D6D /* SHDReporterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDReporterView.h; sourceTree = "<group>"; };
-		4C504BAA1C5B3A87003B6D6D /* SHDReporterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDReporterView.m; sourceTree = "<group>"; };
-		4C504BAB1C5B3A87003B6D6D /* SHDScreenshotsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDScreenshotsCell.h; sourceTree = "<group>"; };
-		4C504BAC1C5B3A87003B6D6D /* SHDScreenshotsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDScreenshotsCell.m; sourceTree = "<group>"; };
-		4C504BAD1C5B3A87003B6D6D /* SHDTextFieldCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDTextFieldCell.h; sourceTree = "<group>"; };
-		4C504BAE1C5B3A87003B6D6D /* SHDTextFieldCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDTextFieldCell.m; sourceTree = "<group>"; };
-		4C504BAF1C5B3A87003B6D6D /* SHDTextViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDTextViewCell.h; sourceTree = "<group>"; };
-		4C504BB01C5B3A87003B6D6D /* SHDTextViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDTextViewCell.m; sourceTree = "<group>"; };
-		4C504BB21C5B3A87003B6D6D /* SHDReporterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SHDReporterViewController.h; sourceTree = "<group>"; };
-		4C504BB31C5B3A87003B6D6D /* SHDReporterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SHDReporterViewController.m; sourceTree = "<group>"; };
-		4C504BB41C5B3A87003B6D6D /* LICENSE.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = LICENSE.md; sourceTree = "<group>"; };
-		4C504BB51C5B3A87003B6D6D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4C54F86D1BFB2B940004B105 /* CacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
 		4C958D501C0F8127009CA929 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		4C958D511C0F8127009CA929 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -467,15 +390,6 @@
 				5C6549E51BD2640D007BEBC7 /* DatabaseManager */,
 			);
 			path = Others;
-			sourceTree = "<group>";
-		};
-		2F02BEFC1C8F5CDF00A6E5A9 /* MarqueeLabel */ = {
-			isa = PBXGroup;
-			children = (
-				2F02BEFD1C8F5CDF00A6E5A9 /* MarqueeLabel.h */,
-				2F02BEFE1C8F5CDF00A6E5A9 /* MarqueeLabel.m */,
-			);
-			path = MarqueeLabel;
 			sourceTree = "<group>";
 		};
 		2F0893C41D25AAC500FB645B /* SideMenu */ = {
@@ -689,32 +603,6 @@
 			path = sounds;
 			sourceTree = "<group>";
 		};
-		2FA0314E1CE0C651007347B9 /* VTAcknowledgementsViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2FA0314F1CE0C651007347B9 /* Classes */,
-				2FA031581CE0C651007347B9 /* LICENSE */,
-				2FA031591CE0C651007347B9 /* README.md */,
-				2FA0315A1CE0C651007347B9 /* VTAcknowledgementsViewController.bundle */,
-			);
-			path = VTAcknowledgementsViewController;
-			sourceTree = "<group>";
-		};
-		2FA0314F1CE0C651007347B9 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2FA031501CE0C651007347B9 /* VTAcknowledgement.h */,
-				2FA031511CE0C651007347B9 /* VTAcknowledgement.m */,
-				2FA031521CE0C651007347B9 /* VTAcknowledgementsParser.h */,
-				2FA031531CE0C651007347B9 /* VTAcknowledgementsParser.m */,
-				2FA031541CE0C651007347B9 /* VTAcknowledgementsViewController.h */,
-				2FA031551CE0C651007347B9 /* VTAcknowledgementsViewController.m */,
-				2FA031561CE0C651007347B9 /* VTAcknowledgementViewController.h */,
-				2FA031571CE0C651007347B9 /* VTAcknowledgementViewController.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
 		2FA431A61C91576700B84700 /* PredicateBuilder */ = {
 			isa = PBXGroup;
 			children = (
@@ -733,7 +621,6 @@
 		2FAC479E1C9C128800C6A988 /* Normal */ = {
 			isa = PBXGroup;
 			children = (
-				2F02BEFC1C8F5CDF00A6E5A9 /* MarqueeLabel */,
 				2F8033571C9B4B3900B371E3 /* HighlightAnimationAdditions */,
 				4C54F86C1BFB2B940004B105 /* CacheManager */,
 				5C037C431BC43470003BD81E /* RateMyApp */,
@@ -745,7 +632,6 @@
 		2FDE67481C7F285300434A30 /* Very Important */ = {
 			isa = PBXGroup;
 			children = (
-				4C504B831C5B3A87003B6D6D /* Shakedown */,
 				4C958D4F1C0F8127009CA929 /* SDWebImage */,
 			);
 			name = "Very Important";
@@ -756,7 +642,6 @@
 			children = (
 				2F0DD2A31D2E8ADE00E55FCA /* MPMoviePlayerController+BackgroundPlayback */,
 				2F1049D01D299D81009B81A2 /* HCYoutubeParser */,
-				2FA0314E1CE0C651007347B9 /* VTAcknowledgementsViewController */,
 				2F7F18AA1C983ABB00D2E8FD /* SidebarOverlay */,
 				2FA431A61C91576700B84700 /* PredicateBuilder */,
 			);
@@ -813,106 +698,6 @@
 				4CF5FCE71C0DAC5C00AE181B /* StoryBoard */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		4C504B831C5B3A87003B6D6D /* Shakedown */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B841C5B3A87003B6D6D /* Classes */,
-				4C504BB41C5B3A87003B6D6D /* LICENSE.md */,
-				4C504BB51C5B3A87003B6D6D /* README.md */,
-			);
-			path = Shakedown;
-			sourceTree = "<group>";
-		};
-		4C504B841C5B3A87003B6D6D /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B851C5B3A87003B6D6D /* Categories */,
-				4C504B8A1C5B3A87003B6D6D /* Models */,
-				4C504B911C5B3A87003B6D6D /* Reporters */,
-				4C504B9F1C5B3A87003B6D6D /* SHDConstants.h */,
-				4C504BA01C5B3A87003B6D6D /* UI */,
-				4C504BB11C5B3A87003B6D6D /* View Controllers */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		4C504B851C5B3A87003B6D6D /* Categories */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B861C5B3A87003B6D6D /* SHDShakedown+Private.h */,
-				4C504B871C5B3A87003B6D6D /* SHDShakedown+Private.m */,
-				4C504B881C5B3A87003B6D6D /* UIWindow+SHDShakeListener.h */,
-				4C504B891C5B3A87003B6D6D /* UIWindow+SHDShakeListener.m */,
-			);
-			path = Categories;
-			sourceTree = "<group>";
-		};
-		4C504B8A1C5B3A87003B6D6D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B8B1C5B3A87003B6D6D /* SHDAttachment.h */,
-				4C504B8C1C5B3A87003B6D6D /* SHDAttachment.m */,
-				4C504B8D1C5B3A87003B6D6D /* SHDBugReport.h */,
-				4C504B8E1C5B3A87003B6D6D /* SHDBugReport.m */,
-				4C504B8F1C5B3A87003B6D6D /* SHDShakedown.h */,
-				4C504B901C5B3A87003B6D6D /* SHDShakedown.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		4C504B911C5B3A87003B6D6D /* Reporters */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B921C5B3A87003B6D6D /* Dependencies */,
-				4C504B951C5B3A87003B6D6D /* SHDShakedownEmailReporter.h */,
-				4C504B961C5B3A87003B6D6D /* SHDShakedownEmailReporter.m */,
-				4C504B9B1C5B3A87003B6D6D /* SHDShakedownReporter.h */,
-				4C504B9C1C5B3A87003B6D6D /* SHDShakedownReporter.m */,
-			);
-			path = Reporters;
-			sourceTree = "<group>";
-		};
-		4C504B921C5B3A87003B6D6D /* Dependencies */ = {
-			isa = PBXGroup;
-			children = (
-				4C504B931C5B3A87003B6D6D /* SHDXMLReader.h */,
-				4C504B941C5B3A87003B6D6D /* SHDXMLReader.m */,
-			);
-			path = Dependencies;
-			sourceTree = "<group>";
-		};
-		4C504BA01C5B3A87003B6D6D /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				4C504BA11C5B3A87003B6D6D /* SHDButton.h */,
-				4C504BA21C5B3A87003B6D6D /* SHDButton.m */,
-				4C504BA31C5B3A87003B6D6D /* SHDDescriptiveInfoCell.h */,
-				4C504BA41C5B3A87003B6D6D /* SHDDescriptiveInfoCell.m */,
-				4C504BA51C5B3A87003B6D6D /* SHDListCell.h */,
-				4C504BA61C5B3A87003B6D6D /* SHDListCell.m */,
-				4C504BA71C5B3A87003B6D6D /* SHDMultipleSelectionCell.h */,
-				4C504BA81C5B3A87003B6D6D /* SHDMultipleSelectionCell.m */,
-				4C504BA91C5B3A87003B6D6D /* SHDReporterView.h */,
-				4C504BAA1C5B3A87003B6D6D /* SHDReporterView.m */,
-				4C504BAB1C5B3A87003B6D6D /* SHDScreenshotsCell.h */,
-				4C504BAC1C5B3A87003B6D6D /* SHDScreenshotsCell.m */,
-				4C504BAD1C5B3A87003B6D6D /* SHDTextFieldCell.h */,
-				4C504BAE1C5B3A87003B6D6D /* SHDTextFieldCell.m */,
-				4C504BAF1C5B3A87003B6D6D /* SHDTextViewCell.h */,
-				4C504BB01C5B3A87003B6D6D /* SHDTextViewCell.m */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		4C504BB11C5B3A87003B6D6D /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				4C504BB21C5B3A87003B6D6D /* SHDReporterViewController.h */,
-				4C504BB31C5B3A87003B6D6D /* SHDReporterViewController.m */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		4C54F84C1BFB206F0004B105 /* Application Resources */ = {
@@ -1182,7 +967,6 @@
 				1987524D1C734884007755D0 /* Icon-60@3x.png in Resources */,
 				2F0893C21D25A83E00FB645B /* iTunesArtwork in Resources */,
 				2F7F18AF1C983ABB00D2E8FD /* Info.plist in Resources */,
-				2FA031611CE0C651007347B9 /* VTAcknowledgementsViewController.bundle in Resources */,
 				198752581C734884007755D0 /* Icon@2x.png in Resources */,
 				2FA0314D1CE0C18A007347B9 /* Pods-Application-acknowledgements.plist in Resources */,
 				2F31AFCF1D2C5BFD0000C0C7 /* GoogleService-Info.plist in Resources */,
@@ -1206,7 +990,6 @@
 				198752531C734884007755D0 /* Icon-Small-50@2x.png in Resources */,
 				4C958D701C0F8127009CA929 /* LICENSE in Resources */,
 				1987524B1C734884007755D0 /* Icon-60.png in Resources */,
-				2FA0315F1CE0C651007347B9 /* LICENSE in Resources */,
 				2F80335D1C9B4B3900B371E3 /* Mask.png in Resources */,
 				4C3B3AF31C477878007C0EA7 /* Launch Screen.storyboard in Resources */,
 				198752571C734884007755D0 /* Icon.png in Resources */,
@@ -1284,78 +1067,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0893CF1D25AAD500FB645B /* TabController.swift in Sources */,
-				4C504BD11C5B3A87003B6D6D /* SHDTextViewCell.m in Sources */,
 				2F5D9B0A1E2A3589006D7591 /* CombinedObjectiveC.m in Sources */,
 				2F0893E01D25C1B000FB645B /* HomeViewController.swift in Sources */,
 				2FA431AF1C91576700B84700 /* DKArrayQuery.m in Sources */,
 				2F31AFCD1D2C54E10000C0C7 /* PlaylistViewController.swift in Sources */,
 				4CB316511C05C18700539747 /* Paginator.swift in Sources */,
 				2FA431B11C91576700B84700 /* DKPredicateBuilder.m in Sources */,
-				4C504BC31C5B3A87003B6D6D /* SHDShakedown.m in Sources */,
 				2F9216981D2AEA6D0004AE58 /* Video+CoreDataProperties.swift in Sources */,
-				4C504BCB1C5B3A87003B6D6D /* SHDDescriptiveInfoCell.m in Sources */,
-				4C504BC21C5B3A87003B6D6D /* SHDBugReport.m in Sources */,
-				4C504BCC1C5B3A87003B6D6D /* SHDListCell.m in Sources */,
-				2FA0315C1CE0C651007347B9 /* VTAcknowledgementsParser.m in Sources */,
 				4C958D731C0F8127009CA929 /* SDImageCache.m in Sources */,
 				4C958D791C0F8127009CA929 /* SDWebImagePrefetcher.m in Sources */,
 				2FDF10CF1D2F0A1C00A69642 /* SingleLabelAndSwitchTableViewCell.swift in Sources */,
 				2F5D9B0F1E2A36FD006D7591 /* BaseUrls.swift in Sources */,
 				4C958D7E1C0F8127009CA929 /* UIImageView+WebCache.m in Sources */,
-				4C504BCA1C5B3A87003B6D6D /* SHDButton.m in Sources */,
 				5C037C451BC43470003BD81E /* RateMyApp.swift in Sources */,
-				4C504BBF1C5B3A87003B6D6D /* SHDShakedown+Private.m in Sources */,
 				2F4BAABF1D27CFA7008E0F11 /* YouTubeHelper.swift in Sources */,
 				4C54F86E1BFB2B940004B105 /* CacheManager.swift in Sources */,
-				2FA0315D1CE0C651007347B9 /* VTAcknowledgementsViewController.m in Sources */,
 				4C958D7C1C0F8127009CA929 /* UIImage+MultiFormat.m in Sources */,
-				4C504BC51C5B3A87003B6D6D /* SHDShakedownEmailReporter.m in Sources */,
 				2FA431B21C91576700B84700 /* NSArray+ArrayQuery.m in Sources */,
 				4C958D751C0F8127009CA929 /* SDWebImageDecoder.m in Sources */,
 				5C6549E71BD2640D007BEBC7 /* DatabaseManager.swift in Sources */,
-				4C504BCD1C5B3A87003B6D6D /* SHDMultipleSelectionCell.m in Sources */,
 				2F0DD2A61D2E8AEF00E55FCA /* MPMoviePlayerController+BackgroundPlayback.m in Sources */,
-				4C504BC11C5B3A87003B6D6D /* SHDAttachment.m in Sources */,
 				2F0893E51D25C87800FB645B /* VideoTableViewCell.swift in Sources */,
 				4C958D7B1C0F8127009CA929 /* UIImage+GIF.m in Sources */,
-				4C504BC01C5B3A87003B6D6D /* UIWindow+SHDShakeListener.m in Sources */,
 				4C2913C51BFADF7100C96246 /* AppDelegate.swift in Sources */,
 				2F0893D91D25AC4A00FB645B /* SingleLabelTableViewCell.swift in Sources */,
-				4C504BCF1C5B3A87003B6D6D /* SHDScreenshotsCell.m in Sources */,
 				2F7F18B11C983ABB00D2E8FD /* UIViewController.swift in Sources */,
 				2F80335C1C9B4B3900B371E3 /* GM_FSHighlightAnimationAdditions.m in Sources */,
-				4C504BCE1C5B3A87003B6D6D /* SHDReporterView.m in Sources */,
 				2F5D9B0B1E2A3589006D7591 /* CombinedSwift.swift in Sources */,
 				4C958D7F1C0F8127009CA929 /* UIView+WebCacheOperation.m in Sources */,
-				4C504BC41C5B3A87003B6D6D /* SHDXMLReader.m in Sources */,
 				2F31AFCA1D2C36630000C0C7 /* SearchViewController.swift in Sources */,
 				2F0893C61D25AAC500FB645B /* SideMenuViewController.swift in Sources */,
 				2F9216991D2AEA6D0004AE58 /* Video.swift in Sources */,
 				5CEF4C481BCE7193000D139C /* ApplicationSpecificConstants.swift in Sources */,
 				1979F2D11B3B46AB00A98EE4 /* Application.xcdatamodeld in Sources */,
-				4C504BC81C5B3A87003B6D6D /* SHDShakedownReporter.m in Sources */,
 				5C892FDA1BD12D28001E929E /* AppCommonFunctions.swift in Sources */,
 				4C958D771C0F8127009CA929 /* SDWebImageDownloaderOperation.m in Sources */,
 				2F9216961D2AEA6D0004AE58 /* Playlist+CoreDataProperties.swift in Sources */,
 				4C958D761C0F8127009CA929 /* SDWebImageDownloader.m in Sources */,
 				4CB316501C05C18700539747 /* AKSPaginator.swift in Sources */,
-				4C504BD01C5B3A87003B6D6D /* SHDTextFieldCell.m in Sources */,
-				2FA0315B1CE0C651007347B9 /* VTAcknowledgement.m in Sources */,
 				2F1049D61D29A76B009B81A2 /* WebViewViewController.swift in Sources */,
 				2F0DD2A21D2E6A3300E55FCA /* CommonPickerViewController.swift in Sources */,
-				4C504BD21C5B3A87003B6D6D /* SHDReporterViewController.m in Sources */,
-				2FA0315E1CE0C651007347B9 /* VTAcknowledgementViewController.m in Sources */,
 				2F9216971D2AEA6D0004AE58 /* Playlist.swift in Sources */,
 				5CF201E81BB6B28600029358 /* HolderTextView.swift in Sources */,
 				4C958D741C0F8127009CA929 /* SDWebImageCompat.m in Sources */,
-				4C504BD41C5B3A87003B6D6D /* README.md in Sources */,
-				2FA031601CE0C651007347B9 /* README.md in Sources */,
 				4C958D7D1C0F8127009CA929 /* UIImageView+HighlightedWebCache.m in Sources */,
 				4C958D711C0F8127009CA929 /* README.md in Sources */,
 				4C958D721C0F8127009CA929 /* NSData+ImageContentType.m in Sources */,
 				2F1049D31D299D81009B81A2 /* HCYoutubeParser.m in Sources */,
 				4C958D781C0F8127009CA929 /* SDWebImageManager.m in Sources */,
-				2F02BEFF1C8F5CDF00A6E5A9 /* MarqueeLabel.m in Sources */,
 				2FDF10CB1D2F092700A69642 /* StreamingSettings.swift in Sources */,
 				2F0893D71D25AC4A00FB645B /* AppInfoTableViewCell.swift in Sources */,
 				2F7F18B01C983ABB00D2E8FD /* SOContainerViewController.swift in Sources */,
@@ -1363,7 +1122,6 @@
 				4C958D7A1C0F8127009CA929 /* UIButton+WebCache.m in Sources */,
 				2F0893DD1D25B82500FB645B /* OtherOptionsViewController.swift in Sources */,
 				2F5D9B101E2A36FD006D7591 /* ServerCommunicationManager.swift in Sources */,
-				4C504BD31C5B3A87003B6D6D /* LICENSE.md in Sources */,
 				1979F3021B3B4D7E00A98EE4 /* CommonMethods.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

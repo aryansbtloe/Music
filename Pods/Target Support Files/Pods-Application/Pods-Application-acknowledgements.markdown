@@ -301,6 +301,10 @@ Fabric: Copyright 2016 Twitter, Inc. All Rights Reserved. Use of this software i
    See the License for the specific language governing permissions and
    limitations under the License.
 
+## GoogleMobileAds
+
+Copyright 2011 Google Inc. All Rights Reserved.
+
 ## IQKeyboardManagerSwift
 
 IQKeyboardManager license

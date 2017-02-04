@@ -119,7 +119,7 @@ class WebViewViewController: UIViewController,UITextFieldDelegate,UIWebViewDeleg
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool{
         webview?.isHidden = true
         windowObject()!.showActivityIndicator()
-        log(request.url)
+        logMessage(request.url)
         return true
     }
     

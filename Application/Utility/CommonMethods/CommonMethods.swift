@@ -672,40 +672,12 @@ public func resignKeyboard(){
     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to:nil, from:nil, for:nil)
 }
 
-public func storyBoardObjectMainPart1()->(UIStoryboard){
-    return UIStoryboard(name: "MainPart1", bundle: nil)
-}
-
-public func storyBoardObjectMainPart2()->(UIStoryboard){
-    return UIStoryboard(name: "MainPart2", bundle: nil)
-}
-
-public func storyBoardObjectMainPart3()->(UIStoryboard){
-    return UIStoryboard(name: "MainPart3", bundle: nil)
-}
-
-public func storyBoardObjectMainPart4()->(UIStoryboard){
-    return UIStoryboard(name: "MainPart4", bundle: nil)
-}
-
-public func storyBoardObjectMainPart5()->(UIStoryboard){
-    return UIStoryboard(name: "MainPart5", bundle: nil)
+public func storyBoardObject()->(UIStoryboard){
+    return UIStoryboard(name: "Main", bundle: nil)
 }
 
 func getViewController(_ identifier:NSString)->(UIViewController){
-    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObjectMainPart1()) as UIViewController? {
-        return viewController
-    }
-    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObjectMainPart2()) as UIViewController? {
-        return viewController
-    }
-    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObjectMainPart3()) as UIViewController? {
-        return viewController
-    }
-    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObjectMainPart4()) as UIViewController? {
-        return viewController
-    }
-    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObjectMainPart5()) as UIViewController? {
+    if let viewController = loadViewController(identifier as String, storyBoard: storyBoardObject()) as UIViewController? {
         return viewController
     }
     return UIViewController()
