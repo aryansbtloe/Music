@@ -122,14 +122,17 @@ class VideoTableViewCell : UITableViewCell {
                     }
                 }
             }
+            let myLibraryPlaylist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
+            DatabaseManager.sharedInstance.addVideo(information, playlist: myLibraryPlaylist!)
+
             if isNotNull(playListNameInAction){
             let playlist = DatabaseManager.sharedInstance.getPlaylist(["name":playListNameInAction!])
-                DatabaseManager.sharedInstance.addVideo(information, playlist: playlist!)
+                if myLibraryPlaylist!.name != playlist!.name {
+                    DatabaseManager.sharedInstance.addVideo(information, playlist: playlist!)
+                }
                 showNotification("video added to your \(playListNameInAction!)", showOnNavigation: false, showAsError: false)
             }else{
-                let myLibraryPlaylist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
-                DatabaseManager.sharedInstance.addVideo(information, playlist: myLibraryPlaylist!)
-                showNotification("video added to your library", showOnNavigation: false, showAsError: false)
+                showNotification("video added to your My Library", showOnNavigation: false, showAsError: false)
             }
             actionButton.isEnabled = false
         }
