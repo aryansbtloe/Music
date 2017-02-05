@@ -47,7 +47,7 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
     
     
     func prepareForStartUp(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [AnyHashable: Any]?){
-        checkAndValidateDatabase()
+        setupDatabase()
         setupIQKeyboardManagerEnable()
         setupRateMyApp()
         setupOtherSettings()
@@ -62,11 +62,11 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
     func addAdsBanner(_ viewController:UIViewController) {
         DispatchQueue.main.async {
             viewController.view.viewWithTag(ADD_BANNER_VIEW_TAG)?.removeSubviews()
-            let bannerView = GADBannerView()
+            let origin = CGPoint(x: 0.0, y: viewController.view.frame.size.height - CGSizeFromGADAdSize(kGADAdSizeSmartBannerPortrait).height)
+            let bannerView = GADBannerView(adSize: kGADAdSizeSmartBannerPortrait, origin: origin)
             viewController.view.addSubview(bannerView)
-            bannerView.frame = CGRect(x: 0,y: viewController.view.h-ADD_BANNER_VIEW_HEIGHT, width: viewController.view.w,height: ADD_BANNER_VIEW_HEIGHT)
             bannerView.tag = ADD_BANNER_VIEW_TAG
-            bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+            bannerView.adUnitID = "ca-app-pub-7178447751314817/8784249680"
             bannerView.rootViewController = viewController
             let request = GADRequest()
             request.testDevices = [kGADSimulatorID]
@@ -74,18 +74,8 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
         }
     }
     
-    func checkAndValidateDatabase(){
-        let savedBuildInformation = UserDefaults.standard.object(forKey: "APP_UNIQUE_BUILD_IDENTIFIER") as? String
-        if isNotNull(savedBuildInformation){
-            if savedBuildInformation! == ez.appVersionAndBuild{
-                // all is well , dont worry
-            }else{
-                // reset every thing , please
-                DatabaseManager.sharedInstance.resetDatabase()
-            }
-        }else{
-            UserDefaults.standard.set(ez.appVersionAndBuild, forKey: "APP_UNIQUE_BUILD_IDENTIFIER")
-        }
+    func setupDatabase() {
+        DatabaseManager.sharedInstance.setupCoreDataDatabase()
     }
     
     func setupKeyboardNextButtonHandler(){

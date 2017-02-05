@@ -79,9 +79,9 @@ class StreamingSettingsViewController: UIViewController {
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         setAppearanceForTableView(tableView)
         registerNib("SingleLabelAndSwitchTableViewCell", tableView: tableView)
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){

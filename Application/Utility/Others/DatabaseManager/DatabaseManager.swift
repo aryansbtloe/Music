@@ -29,7 +29,16 @@ class DatabaseManager: NSObject{
     var completionBlock: DatabaseManager?
     var managedObjectContext : NSManagedObjectContext?
 
-    
+    func setupCoreDataDatabase() {
+        MagicalRecord.setupCoreDataStack(withAutoMigratingSqliteStoreNamed: self.dbStore())
+        #if DEBUG
+            MagicalRecord.setLoggingLevel(MagicalRecordLoggingLevel.all)
+        #else
+            MagicalRecord.setLoggingLevel(MagicalRecordLoggingLevel.error)
+        #endif
+        self.managedObjectContext = NSManagedObjectContext.mr_default()
+    }
+
     /**
      * Playlist
      */
@@ -114,11 +123,10 @@ class DatabaseManager: NSObject{
     
     func searchVideo(_ name:String?,playlist:Playlist)->NSArray{
         if isNotNull(name){
-            if let videos = playlist.videos?.array as? [Video]{
-//                return videos.filter({
-//                    return ($0 as! Video).title!.lowercased().contains(name!.lowercased().trimmed()) || ($0 as! Video).descriptionString!.lowercased().contains(name!.lowercased().trimmed())
-//                    
-//                })
+            if playlist.videos?.array != nil {
+                return playlist.videos!.filter({ (video) -> Bool in
+                    return (video as! Video).title!.lowercased().contains(name!.lowercased().trimmed()) || (video as! Video).descriptionString!.lowercased().contains(name!.lowercased().trimmed())
+                }) as NSArray
             }else{
                 return NSArray()
             }
@@ -129,12 +137,19 @@ class DatabaseManager: NSObject{
                 return NSArray()
             }
         }
-        return NSArray()
     }
     
     /**
      * Common Database Operations
      */
+    
+    func dbStore() -> String {
+        return "\(self.bundleID()).sqlite"
+    }
+    
+    func bundleID() -> String {
+        return Bundle.main.bundleIdentifier!
+    }
     
     func resetDatabase(){
         Playlist.mr_truncateAll()

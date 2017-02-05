@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0820"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F43D4075EC0A91485DF596AC861C3607"
+               BlueprintIdentifier = "16343D2E78FC5D76DDFB755C9A63D962"
                BuildableName = "UIView_AnimationExtensions.framework"
                BlueprintName = "UIView+AnimationExtensions"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F43D4075EC0A91485DF596AC861C3607"
+            BlueprintIdentifier = "16343D2E78FC5D76DDFB755C9A63D962"
             BuildableName = "UIView_AnimationExtensions.framework"
             BlueprintName = "UIView+AnimationExtensions"
             ReferencedContainer = "container:Pods.xcodeproj">

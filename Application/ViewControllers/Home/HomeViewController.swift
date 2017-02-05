@@ -8,6 +8,7 @@
 
 import UIKit
 import DZNEmptyDataSet
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -31,8 +32,6 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     return rhs < lhs
   }
 }
-
-
 
 //MARK: - SearchStatus
 enum SearchStatus {
@@ -72,7 +71,6 @@ class HomeViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDataS
         super.viewWillAppear(animated)
         setupForNavigationBar()
         performSearch()
-        
     }
     
     //MARK: - other methods
@@ -80,17 +78,16 @@ class HomeViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDataS
         setAppearanceForNavigationBarType1(self.navigationController)
         setupNavigationBarTitleType2(APP_NAME,viewController: self)
         addNavigationBarButton(self, image: UIImage(named: "menu"), title: nil, isLeft: true)
+        addNavigationBarButton(self, image: UIImage(named: "tabBar2Active"), title: nil, isLeft: false)
         self.navigationController?.navigationBar.isHidden = false
-        self.view.setNeedsLayout()
-        self.view.setNeedsDisplay()
-        self.view.layoutIfNeeded()
-        self.navigationController!.view.setNeedsLayout()
-        self.navigationController!.view.setNeedsDisplay()
-        self.navigationController!.view.layoutIfNeeded()
     }
     
     func onClickOfLeftBarButton(_ sender:AnyObject){
         AppCommonFunctions.sharedInstance.sideMenuController?.presentLeftMenuViewController()
+    }
+    
+    func onClickOfRightBarButton(_ sender:AnyObject){
+        AppCommonFunctions.sharedInstance.pushVC("SearchViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: nil)
     }
     
     func registerForNotifications(){
@@ -98,11 +95,11 @@ class HomeViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDataS
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         setAppearanceForTableView(tableView)
         registerNib("VideoTableViewCell", tableView: tableView)
         loadLastStatusIfRequired()
         AppCommonFunctions.sharedInstance.addAdsBanner(self)
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){

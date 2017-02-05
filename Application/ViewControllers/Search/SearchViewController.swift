@@ -85,10 +85,11 @@ class SearchViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDat
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         setAppearanceForTableView(tableView)
         registerNib("VideoTableViewCell", tableView: tableView)
         loadLastStatusIfRequired()
+        AppCommonFunctions.sharedInstance.addAdsBanner(self)
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){

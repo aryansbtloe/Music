@@ -11,25 +11,25 @@ import DZNEmptyDataSet
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l < r
-  case (nil, _?):
-    return true
-  default:
-    return false
-  }
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l < r
+    case (nil, _?):
+        return true
+    default:
+        return false
+    }
 }
 
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
-  switch (lhs, rhs) {
-  case let (l?, r?):
-    return l > r
-  default:
-    return rhs < lhs
-  }
+    switch (lhs, rhs) {
+    case let (l?, r?):
+        return l > r
+    default:
+        return rhs < lhs
+    }
 }
 
 
@@ -89,22 +89,23 @@ class PlaylistViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyD
     }
     
     func onClickOfLeftBarButton(_ sender:AnyObject){
-        self.navigationController?.popViewController(animated: true)
+        AppCommonFunctions.sharedInstance.sideMenuController?.presentLeftMenuViewController()
     }
     
     func onClickOfRightBarButton(_ sender:AnyObject){
-
+        AppCommonFunctions.sharedInstance.pushVC("SearchViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: nil)
     }
+    
     
     func registerForNotifications(){
         
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         setAppearanceForTableView(tableView)
         registerNib("VideoTableViewCell", tableView: tableView)
         loadLastStatusIfRequired()
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){
@@ -132,7 +133,7 @@ class PlaylistViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyD
         let attributes = [NSFontAttributeName : UIFont(name: FONT_SEMI_BOLD, size: 14)!]
         var message = ""
         if searchStatus == SearchStatus.notSearched {
-            message = "To begin importing some videos\nuse search button on the top"
+            message = "To begin importing some videos\nuse add button on the top"
         }
         else if searchStatus == SearchStatus.searchedWithNoResults {
             message = "try searching with different name"

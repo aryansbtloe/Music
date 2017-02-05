@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CTFeedback
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -81,10 +83,10 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
-        setAppearanceForTableView(tableView)
         registerNib("SingleLabelTableViewCell", tableView: tableView)
         registerNib("AppInfoTableViewCell", tableView: tableView)
+        setAppearanceForTableView(tableView)
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){
@@ -94,7 +96,7 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
     //MARK: - UITableView Delegate & Data Source
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat{
@@ -109,9 +111,10 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
         cell?.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         if indexPath.row == 0{
             cell?.titleLabel?.text = "Streaming Settings"
-        }
-        if indexPath.row == 1{
+        }else if indexPath.row == 1{
             cell?.titleLabel?.text = "Rate Us"
+        }else if indexPath.row == 2{
+            cell?.titleLabel?.text = "Feedback"
         }
         return cell!
     }
@@ -122,10 +125,15 @@ class OtherOptionsViewController: UIViewController,UITextFieldDelegate {
         }
         if indexPath.row == 0{
             AppCommonFunctions.sharedInstance.pushVC("StreamingSettingsViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: { (viewControllerObject) in
-                
             })
         }else if indexPath.row == 1{
             RateMyApp.sharedInstance.showRatingAlert()
+        }else if indexPath.row == 2{
+            AppCommonFunctions.sharedInstance.hidePopupViewController()
+            let feedbackVC = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(),localizedTopics: CTFeedbackViewController.defaultLocalizedTopics())
+            feedbackVC?.toRecipients = [SUPPORT_EMAIL]
+            feedbackVC?.useHTML = false
+            AppCommonFunctions.sharedInstance.navigationController?.present(UINavigationController(rootViewController: feedbackVC!),animated: true)
         }
     }
     

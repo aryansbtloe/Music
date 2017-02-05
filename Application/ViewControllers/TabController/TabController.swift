@@ -42,7 +42,7 @@ class TabController: UITabBarController {
     
     func setupTabs(){
         let tabBarItems = self.tabBar.items
-        for index in 0...2 {
+        for index in 0...1 {
             let item = tabBarItems![index] as UITabBarItem
             item.image = UIImage(named: "tabBar\(index+1)Normal")
             item.selectedImage = UIImage(named: "tabBar\(index+1)Active")

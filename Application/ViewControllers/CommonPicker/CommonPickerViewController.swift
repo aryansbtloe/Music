@@ -85,11 +85,11 @@ class CommonPickerViewController : UIViewController,UITextFieldDelegate {
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         setAppearanceForTableView(tableView)
         registerNib("SingleLabelTableViewCell", tableView: tableView)
         searchBar.returnKeyType = .done
         optionListCopy.addObjects(from: optionList as [AnyObject])
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){

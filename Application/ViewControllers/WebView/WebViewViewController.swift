@@ -100,8 +100,8 @@ class WebViewViewController: UIViewController,UITextFieldDelegate,UIWebViewDeleg
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         animateWebViewAppearance()
+        setAppearanceForViewController(self)
     }
     
     func updateUserInterfaceOnScreen(){

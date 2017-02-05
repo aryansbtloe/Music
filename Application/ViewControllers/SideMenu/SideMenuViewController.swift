@@ -9,7 +9,6 @@
 
 import UIKit
 import GBDeviceInfo
-import CTFeedback
 
 class SideMenuViewController: UIViewController,UITextFieldDelegate {
     
@@ -54,11 +53,11 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
     }
     
     func startupInitialisations(){
-        setAppearanceForViewController(self)
         prepareOptions()
         registerNib("SingleLabelTableViewCell", tableView: optionsTableView)
         registerNib("AppInfoTableViewCell", tableView: optionsTableView)
         trailingSpaceToSuperView.constant = 100
+        setAppearanceForViewController(self)
     }
     
     func prepareOptions(){
@@ -67,7 +66,6 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
         optionsArray.add("Recently Added")
         optionsArray.add("Playlist")
         optionsArray.add("Create Playlist")
-        optionsArray.add("Feedback")
         optionsArray.add("Others")
         optionsTableView.reloadData()
     }
@@ -138,11 +136,6 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
                         })
                     }
                 }
-            }else if option == ("Feedback") {
-                let feedbackVC = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(),localizedTopics: CTFeedbackViewController.defaultLocalizedTopics())
-                feedbackVC?.toRecipients = [SUPPORT_EMAIL]
-                feedbackVC?.useHTML = false
-                self.navigationController?.present(UINavigationController(rootViewController: feedbackVC!),animated: true)
             }else if option == "Others" {
                 AppCommonFunctions.sharedInstance.showOtherOptionsScreen()
             }

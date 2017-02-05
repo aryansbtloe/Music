@@ -354,7 +354,26 @@ public extension String {
         if isNotNull(self){
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-            date = dateFormatter.date(from: self)!
+            date = dateFormatter.date(from: self)
+            if isNull(date){
+                dateFormatter.dateFormat = "dd-MM-yyyy"
+                date = dateFormatter.date(from: self)
+            }
+            if isNull(date){
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                date = dateFormatter.date(from: self)
+            }
+            if isNull(date){
+                dateFormatter.dateFormat = "dd MM yyyy"
+                date = dateFormatter.date(from: self)
+            }
+            if isNull(date){
+                dateFormatter.dateFormat = "yyyy MM dd"
+                date = dateFormatter.date(from: self)
+            }
+        }
+        if isNull(date){
+            return Date()
         }
         return date!
     }
