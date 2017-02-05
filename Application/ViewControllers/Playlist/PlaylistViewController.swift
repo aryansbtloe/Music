@@ -43,7 +43,6 @@ class PlaylistViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyD
     var searchStatus : SearchStatus = SearchStatus.notSearched
     var searchResults = NSMutableArray()
     var maxCountToShow = -1
-    var showActions = true
     var customTitle : String?
     
     //MARK: - view controller life cycle methods
@@ -82,18 +81,19 @@ class PlaylistViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyD
         if self.navigationController?.viewControllers.count > 1 {
             addNavigationBarButton(self, image: UIImage(named: "backarrowblack"), title: nil, isLeft: true)
         }
-        if showActions {
-            addNavigationBarButton(self, image: UIImage(named: "add"), title: nil, isLeft: false)
-        }
+        addNavigationBarButton(self, image: UIImage(named: "add"), title: nil, isLeft: false)
         self.navigationController?.navigationBar.isHidden = false
     }
     
     func onClickOfLeftBarButton(_ sender:AnyObject){
-        AppCommonFunctions.sharedInstance.sideMenuController?.presentLeftMenuViewController()
+        self.navigationController?.popViewController(animated: true)
     }
     
     func onClickOfRightBarButton(_ sender:AnyObject){
-        AppCommonFunctions.sharedInstance.pushVC("SearchViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: nil)
+        AppCommonFunctions.sharedInstance.pushVC("SearchViewController", navigationController: self.navigationController, isRootViewController: false, animated: true) { (vc) in
+            (vc as! SearchViewController).mode = .searchAddToPlaylist
+            (vc as! SearchViewController).playListNameInAction = self.playlist.name
+        }
     }
     
     

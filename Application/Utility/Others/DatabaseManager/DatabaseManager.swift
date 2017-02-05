@@ -121,6 +121,10 @@ class DatabaseManager: NSObject{
         return isNotNull(getVideo(info, playlist: getMyLibraryPlaylist()!))
     }
     
+    func isVideoInPlaylist(_ info:NSDictionary,playListName:String)->Bool{
+        return isNotNull(getVideo(info, playlist: getPlaylist(["name":playListName])!))
+    }
+    
     func searchVideo(_ name:String?,playlist:Playlist)->NSArray{
         if isNotNull(name){
             if playlist.videos?.array != nil {

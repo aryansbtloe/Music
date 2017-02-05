@@ -20,6 +20,7 @@ class VideoTableViewCell : UITableViewCell {
     
     var videoInformation : NSDictionary!
     var video : Video!
+    var playListNameInAction : String?
     
     weak var parentVC : UIViewController!
     
@@ -67,7 +68,11 @@ class VideoTableViewCell : UITableViewCell {
             }
             if let id = videoInformation.object(forKey: "id") as? NSDictionary{
                 if let videoId = id.object(forKey: "videoId") as? String{
-                    actionButton.isEnabled = !DatabaseManager.sharedInstance.isVideoInLibrary(["id":videoId])
+                    if isNotNull(playListNameInAction){
+                        actionButton.isEnabled = !DatabaseManager.sharedInstance.isVideoInPlaylist(["id":videoId], playListName: self.playListNameInAction!)
+                    }else{
+                        actionButton.isEnabled = !DatabaseManager.sharedInstance.isVideoInLibrary(["id":videoId])
+                    }
                 }
             }
         }else if isNotNull(video){
@@ -90,7 +95,6 @@ class VideoTableViewCell : UITableViewCell {
     
     @IBAction func onClickOfActionButton(){
         if isNotNull(videoInformation){
-            let myLibraryPlaylist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
             let information = NSMutableDictionary()
             if let snippet = videoInformation.object(forKey: "snippet") as? NSDictionary{
                 if let thumbnails = snippet.object(forKey: "thumbnails") as? NSDictionary{
@@ -118,8 +122,15 @@ class VideoTableViewCell : UITableViewCell {
                     }
                 }
             }
-            DatabaseManager.sharedInstance.addVideo(information, playlist: myLibraryPlaylist!)
-            showToast("video added to your library")
+            if isNotNull(playListNameInAction){
+            let playlist = DatabaseManager.sharedInstance.getPlaylist(["name":playListNameInAction!])
+                DatabaseManager.sharedInstance.addVideo(information, playlist: playlist!)
+                showNotification("video added to your \(playListNameInAction!)", showOnNavigation: false, showAsError: false)
+            }else{
+                let myLibraryPlaylist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
+                DatabaseManager.sharedInstance.addVideo(information, playlist: myLibraryPlaylist!)
+                showNotification("video added to your library", showOnNavigation: false, showAsError: false)
+            }
             actionButton.isEnabled = false
         }
     }

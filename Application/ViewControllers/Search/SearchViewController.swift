@@ -8,6 +8,13 @@
 
 import UIKit
 import DZNEmptyDataSet
+
+//MARK: - SearchStatus
+enum WorkingModeSVC {
+    case normalSearch
+    case searchAddToPlaylist
+}
+
 // FIXME: comparison operators with optionals were removed from the Swift Standard Libary.
 // Consider refactoring the code to use the non-optional operators.
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
@@ -41,7 +48,9 @@ class SearchViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDat
     
     var searchStatus : SearchStatus = SearchStatus.notSearched
     var searchResults = NSMutableArray()
-    
+    var mode = WorkingModeSVC.normalSearch
+    var playListNameInAction : String?
+
     //MARK: - view controller life cycle methods
     
     override var prefersStatusBarHidden : Bool {
@@ -164,6 +173,11 @@ class SearchViewController: UIViewController,DZNEmptyDataSetDelegate,DZNEmptyDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoTableViewCell") as? VideoTableViewCell
         cell?.videoInformation = searchResults.object(at: indexPath.row) as? NSDictionary
         cell?.parentVC = self
+        if mode == .normalSearch {
+            
+        }else if mode == .searchAddToPlaylist {
+            cell?.playListNameInAction = self.playListNameInAction
+        }
         return cell!
     }
     

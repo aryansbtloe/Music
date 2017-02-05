@@ -100,14 +100,12 @@ class SideMenuViewController: UIViewController,UITextFieldDelegate {
             if option == "My Library" {
                 AppCommonFunctions.sharedInstance.pushVC("PlaylistViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: { (viewControllerObject) in
                     (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
-                    (viewControllerObject as! PlaylistViewController).showActions = false
                 })
             }else if option == "Recently Added" {
                 AppCommonFunctions.sharedInstance.pushVC("PlaylistViewController", navigationController: self.navigationController, isRootViewController: false, animated: true, modifyObject: { (viewControllerObject) in
                     (viewControllerObject as! PlaylistViewController).playlist = DatabaseManager.sharedInstance.getMyLibraryPlaylist()
                     (viewControllerObject as! PlaylistViewController).maxCountToShow = 10
                     (viewControllerObject as! PlaylistViewController).customTitle = "Recently Added"
-                    (viewControllerObject as! PlaylistViewController).showActions = false
                 })
             }else if option == "Create Playlist" {
                 let prompt = UIAlertController(title: "Enter Playlist Name", message: "", preferredStyle: UIAlertControllerStyle.alert)
