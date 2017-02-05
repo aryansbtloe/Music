@@ -108,6 +108,8 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
             CacheManager.sharedInstance.saveObject("0", identifier: "streamingSettings")
         }
         setupBackgroundAudioSettings()
+        NotificationCenter.default.addObserver(self, selector: #selector(AppCommonFunctions.stopPlayer), name: NSNotification.Name.MPMoviePlayerWillExitFullscreen, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(AppCommonFunctions.hidePlayer), name: NSNotification.Name.MPMoviePlayerWillEnterFullscreen, object: nil)
     }
     
     func setupBackgroundAudioSettings() {
@@ -293,6 +295,10 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
     
     let VIDEO_PLAYER_HEIGHT = 180.0 as CGFloat
     
+    func hidePlayer(){
+        videoPlayerContainerView!.isHidden = true
+    }
+    
     func stopPlayer(){
         if videoPlayer != nil {
             videoPlayer?.moviePlayer.view.removeFromSuperview()
@@ -324,11 +330,9 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
         if ENABLE_APPLYING_STREAMING_SETTINGS {
             if streamingSettings.isEqual(to: "0"){
                 videoPlayer?.preferredVideoQualities = [XCDYouTubeVideoQuality.small240 as AnyObject,XCDYouTubeVideoQuality.medium360 as AnyObject,XCDYouTubeVideoQuality.HD720 as AnyObject]
-            }
-            else if streamingSettings.isEqual(to: "1"){
+            }else if streamingSettings.isEqual(to: "1"){
                 videoPlayer?.preferredVideoQualities = [XCDYouTubeVideoQuality.medium360 as AnyObject,XCDYouTubeVideoQuality.small240 as AnyObject,XCDYouTubeVideoQuality.HD720 as AnyObject]
-            }
-            else if streamingSettings.isEqual(to: "2"){
+            }else if streamingSettings.isEqual(to: "2"){
                 videoPlayer?.preferredVideoQualities = [XCDYouTubeVideoQuality.HD720 as AnyObject,XCDYouTubeVideoQuality.medium360 as AnyObject,XCDYouTubeVideoQuality.small240 as AnyObject]
             }
         }
@@ -345,6 +349,17 @@ class AppCommonFunctions: NSObject , UITabBarControllerDelegate, RESideMenuDeleg
         videoPlayer!.moviePlayer.play()
         videoPlayerContainerView!.enableDragging()
         videoPlayer!.view.backgroundColor = UIColor.clear
+        
+        let b = videoPlayerContainerView!.bounds
+        let closeButton = UIButton(type: .custom)
+        closeButton.addTarget(self, action: #selector(AppCommonFunctions.stopPlayer), for: UIControlEvents.touchUpInside)
+        closeButton.frame = CGRect(x:0, y:0, w: 30, h: 30)
+        closeButton.center = b.topRight
+        closeButton.centerX = closeButton.centerX - 15
+        closeButton.centerY = closeButton.centerY + 15
+        closeButton.backgroundColor = UIColor.white
+        closeButton.setImage(UIImage(named: "closeButton"), for: UIControlState.normal)
+        videoPlayerContainerView?.addSubview(closeButton)
     }
     
     func showWebViewController(_ workingMode:WorkingMode,customUrl:String?="",customTitle:String?=""){
